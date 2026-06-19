@@ -43,3 +43,18 @@ body{
   color: hsl(218, 15%, 66%);
   margin: 1rem;
 }
+
+/* mobile design */
+@media (max-width: 480px) {
+  .card {
+    width: 90%;
+  }
+}
+
+/* tablet design */
+@media (min-width: 481px) and (max-width: 768px) {
+  .card {
+    width: 70%;
+  }
+}
+

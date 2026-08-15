@@ -1,14 +1,13 @@
 /* ========================= FONTS ========================= */
 @font-face {
-  font-family: "Figtree";
+  font-family: "Figtree-Medium";
   src: url("./fonts/static/Figtree-Medium.ttf") format("truetype");
   font-weight: 500;
 }
 
 @font-face {
-  font-family: "Figtree";
+  font-family: "Figtree-ExtraBold";
   src: url("./fonts/static/Figtree-ExtraBold.ttf") format("truetype");
-  font-weight: 800;
 } 
 
 
@@ -22,7 +21,6 @@ body {
   font-family: "Figtree", sans-serif;
   display: flex;
   flex-direction: column;
-  gap: 50px;
 }
 
 
@@ -30,12 +28,12 @@ body {
 .card {
   width: 327px;
   padding: 24px;
-  background-color: #fff;
+  gap: 24px;
   border-radius: 20px;
+  background-color: #fff;
   box-shadow: 8px 8px 0 rgb(0, 0, 0);
   display: flex;
   flex-direction: column;
-  gap: 24px;
   box-sizing: border-box;
 }
 
@@ -46,6 +44,7 @@ img {
   height: 200px;
   object-fit: cover;
   border-radius: 10px;
+  display: block;
 }
 
 /* ========================= CARD CONTENT ========================= */
@@ -64,25 +63,32 @@ img {
 }
 
 .category span {
+  font-family: "Figtree-ExtraBold", sans-serif;
   font-size: 12px;
   font-weight: 800;
   line-height: 150%;
+  display: block;
+  letter-spacing: 0%;
 }
 
 /* DATE */
 .card__date span {
+  font-family: "Figtree-Medium", sans-serif;
   font-size: 12px;
   font-weight: 500;
   line-height: 150%;
   color: #111111;
+  display: block;
 }
 
 /* TITLE */
 .card__title h1 {
   margin: 0;
+  font-family: "Figtree-ExtraBold", sans-serif;
   font-size: 20px;
   font-weight: 800;
   line-height: 150%;
+  letter-spacing: 0%;
   color: #111111;
 }
 
@@ -127,10 +133,6 @@ img {
 
   .card {
     width: 384px;
-  }
-
-  img {
-    height: 200px;
   }
 
   .category span {

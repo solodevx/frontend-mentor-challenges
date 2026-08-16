@@ -1,21 +1,33 @@
-/* ========================= FONTS ========================= */
+:root {
+  --color-yellow: #f4d04e;
+  --color-neutral: #111111;
+  --color-gray: #6b6b6b;
+}
+
+/* =========================
+   FONTS
+========================= */
+
 @font-face {
-  font-family: "Figtree-Medium";
+  font-family: "Figtree";
   src: url("./fonts/static/Figtree-Medium.ttf") format("truetype");
   font-weight: 500;
 }
 
 @font-face {
-  font-family: "Figtree-ExtraBold";
+  font-family: "Figtree";
   src: url("./fonts/static/Figtree-ExtraBold.ttf") format("truetype");
-} 
+  font-weight: 800;
+}
 
+/* =========================
+   PAGE
+========================= */
 
-/* ========================= PAGE ========================= */
 body {
   margin: 0;
   min-height: 100vh;
-  background-color: #f4d04e;
+  background-color: var(--color-yellow);
   justify-content: center;
   align-items: center;
   font-family: "Figtree", sans-serif;
@@ -23,10 +35,13 @@ body {
   flex-direction: column;
 }
 
+/* =========================
+   CARD — MOBILE FIRST
+========================= */
 
-/* ========================= CARD — MOBILE FIRST ========================= */
 .card {
-  width: 327px;
+  max-width: 327px;
+  width: 100%;
   padding: 24px;
   gap: 24px;
   border-radius: 20px;
@@ -37,8 +52,10 @@ body {
   box-sizing: border-box;
 }
 
+/* =========================
+   BLOG IMAGE
+========================= */
 
-/* ========================= BLOG IMAGE ========================= */
 img {
   width: 100%;
   height: 200px;
@@ -47,7 +64,10 @@ img {
   display: block;
 }
 
-/* ========================= CARD CONTENT ========================= */
+/* =========================
+   CARD CONTENT
+========================= */
+
 .card__content {
   display: flex;
   flex-direction: column;
@@ -55,59 +75,63 @@ img {
 }
 
 /* CATEGORY */
+
 .category {
   width: fit-content;
   padding: 4px 12px;
-  background-color: #f4d04e;
+  background-color: var(--color-yellow);
   border-radius: 4px;
 }
 
 .category span {
-  font-family: "Figtree-ExtraBold", sans-serif;
-  font-size: 12px;
+  font-size: 0.75rem;
   font-weight: 800;
   line-height: 150%;
   display: block;
-  letter-spacing: 0%;
+  letter-spacing: 0;
 }
 
 /* DATE */
+
 .card__date span {
-  font-family: "Figtree-Medium", sans-serif;
-  font-size: 12px;
+  font-size: 0.75rem;
   font-weight: 500;
   line-height: 150%;
-  color: #111111;
+  color: var(--color-neutral);
   display: block;
 }
 
 /* TITLE */
+
 .card__title h1 {
   margin: 0;
-  font-family: "Figtree-ExtraBold", sans-serif;
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: 800;
   line-height: 150%;
-  letter-spacing: 0%;
-  color: #111111;
+  letter-spacing: 0;
+  color: var(--color-neutral);
 }
 
 /* TITLE HOVER */
+
 .card__title h1:hover {
-  color: #f4d04e;
-  cursor: pointer;
+  color: var(--color-yellow);
 }
 
 /* DESCRIPTION */
+
 .card__description p {
   margin: 0;
-  color: #6b6b6b;
-  font-size: 14px;
+  color: var(--color-gray);
+  font-size: 0.875rem;
   font-weight: 500;
   line-height: 150%;
 }
 
-/* ========================= AUTHOR ========================= */
+/* =========================
+   AUTHOR
+========================= */
+
 .card-author {
   display: flex;
   align-items: center;
@@ -121,33 +145,33 @@ img {
 }
 
 .author-name {
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 800;
   line-height: 150%;
 }
 
+/* =========================
+   DESKTOP
+========================= */
 
-
-/* ========================= DESKTOP ========================= */
 @media (min-width: 768px) {
-
   .card {
-    width: 384px;
+    max-width: 384px;
   }
 
   .category span {
-    font-size: 14px;
+    font-size: 0.875rem;
   }
 
   .card__date span {
-    font-size: 14px;
+    font-size: 0.875rem;
   }
 
   .card__title h1 {
-    font-size: 24px;
+    font-size: 1.5rem;
   }
 
   .card__description p {
-    font-size: 16px;
+    font-size: 1rem;
   }
 }
